@@ -1,6 +1,9 @@
-package com.grapeup.dape.dev.cleancode.core.products;
+package com.grapeup.dape.dev.cleancode.core.products.businessrules;
 
-interface BusinessRule {
+import com.grapeup.dape.dev.cleancode.core.products.Filterable;
+import com.grapeup.dape.dev.cleancode.core.products.Product;
+
+public interface BusinessRule {
     default boolean isAvailable(Filterable filterable, String userId, String deviceId) {
         return switch (filterable) {
             case Product element -> isAvailable(element, userId, deviceId);

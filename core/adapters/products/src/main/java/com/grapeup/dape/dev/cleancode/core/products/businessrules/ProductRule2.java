@@ -1,4 +1,6 @@
-package com.grapeup.dape.dev.cleancode.core.products;
+package com.grapeup.dape.dev.cleancode.core.products.businessrules;
+
+import com.grapeup.dape.dev.cleancode.core.products.Product;
 
 class ProductRule2 implements BusinessRule {
     @Override
