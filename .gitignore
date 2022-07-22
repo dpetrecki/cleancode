@@ -1,0 +1,7 @@
+# Project exclude paths
+/application/target/
+/core/adapters/products/target/
+/core/ports/products/target/
+/egress/adapters/products-persistence/target/
+/egress/ports/products-persistence/target/
+/ingress/product-rest-client/target/

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for cleancode" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="mapstruct.defaultComponentModel" value="spring" />
+        <option name="mapstruct.defaultInjectionStrategy" value="constructor" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.2.Final/mapstruct-processor-1.5.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.2.Final/mapstruct-1.5.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+        </processorPath>
+        <module name="products-persistence-ports" />
+        <module name="products-ports" />
+        <module name="application" />
+        <module name="ingress-product-rest-client" />
+        <module name="products-persistence" />
+        <module name="products" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="application (1)" target="18" />
+      <module name="core (1)" target="18" />
+      <module name="core-adapters (1)" target="18" />
+      <module name="core-ports (1)" target="18" />
+      <module name="egress (1)" target="18" />
+      <module name="egress-adapters (1)" target="18" />
+      <module name="egress-ports (1)" target="18" />
+      <module name="ingress (1)" target="18" />
+      <module name="ingress-product-rest-client (1)" target="18" />
+      <module name="products (1)" target="18" />
+      <module name="products-persistence (1)" target="18" />
+      <module name="products-persistence-ports (1)" target="18" />
+      <module name="products-ports (1)" target="18" />
+      <module name="varianta" target="18" />
+      <module name="varianta (1)" target="18" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="application" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="cleancode" options="" />
+      <module name="core-adapters" options="" />
+      <module name="core-ports" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="egress" options="" />
+      <module name="egress-adapters" options="" />
+      <module name="egress-ports" options="" />
+      <module name="ingress" options="" />
+      <module name="ingress-product-rest-client" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="products" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="products (1)" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="products-persistence" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="products-persistence-ports" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="products-persistence-ports (1)" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="products-ports" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="varianta" options="" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/adapters/products/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/adapters/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/adapters/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/ports/products/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/ports/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/ports/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/egress/adapters/products-persistence/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/egress/adapters/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/egress/adapters/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/egress/ports/products-persistence/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/egress/ports/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/egress/ports/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/egress/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/egress/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ingress/product-rest-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ingress/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ingress/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/varianta/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/varianta/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/core/adapters/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/core/adapters/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/core/ports/products/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/egress/adapters/products-persistence/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/ingress/product-rest-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/ingress/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/ingress/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/variantb/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
