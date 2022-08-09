@@ -20,12 +20,12 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
         </processorPath>
-        <module name="products-persistence-ports" />
         <module name="products-ports" />
+        <module name="products-persistence-ports" />
         <module name="application" />
         <module name="ingress-product-rest-client" />
-        <module name="products-persistence" />
         <module name="products" />
+        <module name="products-persistence" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -51,10 +51,10 @@
       <module name="application" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
       <module name="cleancode" options="" />
       <module name="core-adapters" options="" />
-      <module name="core-ports" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="core-ports" options="" />
       <module name="egress" options="" />
       <module name="egress-adapters" options="" />
-      <module name="egress-ports" options="" />
+      <module name="egress-ports" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
       <module name="ingress" options="" />
       <module name="ingress-product-rest-client" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
       <module name="products" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />

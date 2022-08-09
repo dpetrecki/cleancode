@@ -1,5 +1,6 @@
 package com.grapeup.dape.dev.cleancode.core.products.businessrules;
 
+import com.grapeup.dape.dev.cleancode.core.products.BusinessRule;
 import com.grapeup.dape.dev.cleancode.core.products.Product;
 
 class ServiceRule1 implements BusinessRule {
