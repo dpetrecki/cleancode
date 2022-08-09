@@ -29,6 +29,12 @@ class CleanCodeIntegrationTest {
                         [
                           {
                             "name": "test product 1",
+                            "field1": "test",
+                            "field2": "test",
+                            "field3": 1,
+                            "field4": 2.5,
+                            "field5": "test",
+                            "field6": "test",
                             "services": [
                               {
                                 "name": "test service 1"
@@ -40,6 +46,12 @@ class CleanCodeIntegrationTest {
                           },
                           {
                             "name": "test product 2",
+                            "field1": "test",
+                            "field2": "test",
+                            "field3": 1,
+                            "field4": 2.5,
+                            "field5": "test",
+                            "field6": "test",
                             "services": [
                               {
                                 "name": "test service 3"

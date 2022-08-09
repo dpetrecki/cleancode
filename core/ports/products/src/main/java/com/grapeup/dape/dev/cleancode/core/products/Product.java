@@ -2,7 +2,6 @@ package com.grapeup.dape.dev.cleancode.core.products;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -13,6 +12,12 @@ import static org.apache.commons.collections4.CollectionUtils.isNotEmpty;
 @Getter
 public final class Product extends Filterable {
     private final String name;
+    private final String field1;
+    private final Object field2;
+    private final Integer field3;
+    private final Double field4;
+    private final Object field5;
+    private final String field6;
     private final Collection<Service> services;
 
     public boolean hasServices() {

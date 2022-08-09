@@ -17,6 +17,13 @@ class ProductEntity {
     @Id
     private Long id;
     private String name;
+    private String field1;
+    private String field2;
+    private Integer field3;
+    private Double field4;
+    private String field5;
+    private String field6;
+
     @ManyToMany
     @JoinTable(name = "product_service",
             joinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id"),
