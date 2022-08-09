@@ -1,7 +1,10 @@
 package com.grapeup.dape.dev.cleancode.core.products;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.util.Collection;
@@ -11,6 +14,8 @@ import static org.apache.commons.collections4.CollectionUtils.isNotEmpty;
 
 @SuperBuilder(toBuilder = true)
 @Getter
+@EqualsAndHashCode(callSuper = true)
+@RequiredArgsConstructor
 public final class Product extends Filterable {
     private final String field1;
     private final Object field2;
@@ -33,6 +38,11 @@ public final class Product extends Filterable {
 
     @SuperBuilder(toBuilder = true)
     @Getter
+    @EqualsAndHashCode(callSuper = true)
+    @RequiredArgsConstructor
     public static final class Service extends Filterable {
+        @Setter
+        @EqualsAndHashCode.Exclude
+        private Product product;
     }
 }
