@@ -2,16 +2,16 @@ package com.grapeup.dape.dev.cleancode.core.products;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
 
 import static org.apache.commons.collections4.CollectionUtils.isNotEmpty;
 
-@RequiredArgsConstructor
+@SuperBuilder(toBuilder = true)
 @Getter
 public final class Product extends Filterable {
-    private final String name;
     private final String field1;
     private final Object field2;
     private final Integer field3;
@@ -31,9 +31,8 @@ public final class Product extends Filterable {
         return super.isAvailable(businessRules, userId, deviceId);
     }
 
-    @RequiredArgsConstructor
+    @SuperBuilder(toBuilder = true)
     @Getter
     public static final class Service extends Filterable {
-        private final String name;
     }
 }

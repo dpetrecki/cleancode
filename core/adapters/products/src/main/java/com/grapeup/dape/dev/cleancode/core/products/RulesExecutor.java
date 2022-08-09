@@ -15,14 +15,7 @@ class RulesExecutor {
 
     Product processProduct(Product product, String userId, String deviceId) {
         var services = getFilteredServices(product, userId, deviceId);
-        var productWithFilteredServices = new Product(product.getName(),
-                product.getField1(),
-                product.getField2(),
-                product.getField3(),
-                product.getField4(),
-                product.getField5(),
-                product.getField6(),
-                services);
+        var productWithFilteredServices = product.toBuilder().services(services).build();
         return productWithFilteredServices.isAvailable(businessRules, userId, deviceId)
                 ? productWithFilteredServices
                 : null;
