@@ -1,10 +1,9 @@
-package com.grapeup.dape.dev.cleancode.core.products;
+package com.grapeup.dape.dev.cleancode.core.products.model;
 
-import lombok.AllArgsConstructor;
+import com.grapeup.dape.dev.cleancode.core.products.businessrules.BusinessRule;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
@@ -15,7 +14,7 @@ import java.util.Collection;
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
-public abstract sealed class Filterable permits Product, Product.Service {
+public abstract sealed class Filterable permits FilterableProduct, FilterableProduct.FilterableService {
 
     private String name;
 

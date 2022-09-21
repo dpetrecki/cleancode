@@ -1,5 +1,7 @@
 package com.grapeup.dape.dev.cleancode.core.products;
 
+import com.grapeup.dape.dev.cleancode.core.products.businessrules.BusinessRule;
+import com.grapeup.dape.dev.cleancode.core.products.model.FilterableProduct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +15,7 @@ import static java.util.stream.Collectors.toCollection;
 class RulesExecutor {
     private final Collection<BusinessRule> businessRules;
 
-    Product processProduct(Product product, String userId, String deviceId) {
+    FilterableProduct processProduct(FilterableProduct product, String userId, String deviceId) {
         var services = getFilteredServices(product, userId, deviceId);
         var productWithFilteredServices = product.toBuilder().services(services).build();
         return productWithFilteredServices.isAvailable(businessRules, userId, deviceId)
@@ -21,7 +23,7 @@ class RulesExecutor {
                 : null;
     }
 
-    private HashSet<Product.Service> getFilteredServices(Product product, String userId, String deviceId) {
+    private HashSet<FilterableProduct.FilterableService> getFilteredServices(FilterableProduct product, String userId, String deviceId) {
         return product.hasServices()
                 ? product.getServices().parallelStream().filter(service -> service.isAvailable(businessRules, userId, deviceId)).collect(toCollection(HashSet::new))
                 : new HashSet<>();

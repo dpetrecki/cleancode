@@ -24,8 +24,8 @@
         <module name="products-persistence-ports" />
         <module name="application" />
         <module name="ingress-product-rest-client" />
-        <module name="products" />
         <module name="products-persistence" />
+        <module name="products" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -54,7 +54,7 @@
       <module name="core-ports" options="" />
       <module name="egress" options="" />
       <module name="egress-adapters" options="" />
-      <module name="egress-ports" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
+      <module name="egress-ports" options="" />
       <module name="ingress" options="" />
       <module name="ingress-product-rest-client" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />
       <module name="products" options="-parameters --enable-preview -Amapstruct.defaultComponentModel=spring -Amapstruct.defaultInjectionStrategy=constructor" />

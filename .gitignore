@@ -5,3 +5,4 @@
 /egress/adapters/products-persistence/target/
 /egress/ports/products-persistence/target/
 /ingress/product-rest-client/target/
+/.idea/vcs.xml
