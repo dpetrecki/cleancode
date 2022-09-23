@@ -4,5 +4,5 @@ import java.util.HashSet;
 
 public interface GetProducts {
 
-    HashSet<Product> calculateAvailableProduct(String userId, String deviceId);
+    HashSet<Product<? extends Service>> calculateAvailableProduct(String userId, String deviceId);
 }

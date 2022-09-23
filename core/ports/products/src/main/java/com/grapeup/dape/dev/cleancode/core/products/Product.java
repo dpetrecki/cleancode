@@ -1,16 +1,19 @@
 package com.grapeup.dape.dev.cleancode.core.products;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import java.util.Collection;
 
 @Getter
+@Setter
+@SuperBuilder(toBuilder = true)
 @RequiredArgsConstructor
-public final class Product {
+public class Product<S extends Service> implements Element {
 
+    protected final Collection<S> services;
     private final String name;
     private final String field1;
     private final Object field2;
@@ -18,14 +21,12 @@ public final class Product {
     private final Double field4;
     private final Object field5;
     private final String field6;
-    private final Collection<Service> services;
 
-    @Getter
-    @RequiredArgsConstructor
-    public static final class Service {
-        private final String name;
-        @Setter
-        @EqualsAndHashCode.Exclude
-        private Product product;
+    @SuppressWarnings("unused")
+    public abstract static class ProductBuilder<S extends Service, C extends Product<S>, B extends ProductBuilder<S, C, B>> {
+        public B fillValuesFromParent(Product<S> instance) {
+            $fillValuesFromInstanceIntoBuilder(instance, this);
+            return self();
+        }
     }
 }

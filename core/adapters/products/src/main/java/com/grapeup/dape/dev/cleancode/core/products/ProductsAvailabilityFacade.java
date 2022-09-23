@@ -15,16 +15,15 @@ class ProductsAvailabilityFacade implements GetProducts {
 
     private final FindProducts findProducts;
     private final RulesExecutor rulesExecutor;
-    private final DomainModelMapper mapper;
+    private final FilterableProductFactory filterableProductFactory;
 
     @Override
-    public HashSet<Product> calculateAvailableProduct(String userId, String deviceId) {
+    public HashSet<Product<? extends Service>> calculateAvailableProduct(String userId, String deviceId) {
         return findProducts.findAll()
                 .parallelStream()
-                .map(mapper::map)
+                .map(filterableProductFactory::build)
                 .map(product -> rulesExecutor.processProduct(product, userId, deviceId))
                 .filter(Objects::nonNull)
-                .map(mapper::map)
                 .collect(toCollection(HashSet::new));
     }
 

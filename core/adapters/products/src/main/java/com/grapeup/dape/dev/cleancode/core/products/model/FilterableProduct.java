@@ -1,10 +1,9 @@
 package com.grapeup.dape.dev.cleancode.core.products.model;
 
+import com.grapeup.dape.dev.cleancode.core.products.Product;
 import com.grapeup.dape.dev.cleancode.core.products.businessrules.BusinessRule;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.util.Collection;
@@ -15,15 +14,12 @@ import static org.apache.commons.collections4.CollectionUtils.isNotEmpty;
 @SuperBuilder(toBuilder = true)
 @Getter
 @EqualsAndHashCode(callSuper = true)
-@RequiredArgsConstructor
-public final class FilterableProduct extends Filterable {
-    private final String field1;
-    private final Object field2;
-    private final Integer field3;
-    private final Double field4;
-    private final Object field5;
-    private final String field6;
-    private final Collection<FilterableService> services;
+public final class FilterableProduct extends Product<FilterableService> implements Filterable {
+
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    public static FilterableProductBuilder<?, ?> toBuilder(Product p) {
+        return new FilterableProductBuilderImpl().fillValuesFromParent(p);
+    }
 
     public boolean hasServices() {
         return isNotEmpty(services);
@@ -33,16 +29,6 @@ public final class FilterableProduct extends Filterable {
     public boolean isAvailable(Collection<BusinessRule> businessRules, String userId, String deviceId) {
         var filteredServices = services.parallelStream().filter(service -> service.isAvailable(businessRules, userId, deviceId)).collect(Collectors.toSet());
         services.removeIf(service -> !filteredServices.contains(service));
-        return super.isAvailable(businessRules, userId, deviceId);
-    }
-
-    @SuperBuilder(toBuilder = true)
-    @Getter
-    @EqualsAndHashCode(callSuper = true)
-    @RequiredArgsConstructor
-    public static final class FilterableService extends Filterable {
-        @Setter
-        @EqualsAndHashCode.Exclude
-        private FilterableProduct product;
+        return DefaultFilter.isAvailable(this, businessRules, userId, deviceId);
     }
 }
