@@ -1,5 +1,6 @@
-package com.grapeup.dape.dev.cleancode.core.products;
+package com.grapeup.dape.dev.cleancode.core.products.model;
 
+import com.grapeup.dape.dev.cleancode.core.products.Element;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -23,7 +24,7 @@ public class Product<S extends Service> implements Element {
     private final String field6;
 
     @SuppressWarnings("unused")
-    public abstract static class ProductBuilder<S extends Service, C extends Product<S>, B extends ProductBuilder<S, C, B>> {
+    abstract static class ProductBuilder<S extends Service, C extends Product<S>, B extends ProductBuilder<S, C, B>> {
         public B fillValuesFromParent(Product<S> instance) {
             $fillValuesFromInstanceIntoBuilder(instance, this);
             return self();

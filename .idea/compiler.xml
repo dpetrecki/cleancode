@@ -24,8 +24,8 @@
         <module name="products-persistence-ports" />
         <module name="application" />
         <module name="ingress-product-rest-client" />
-        <module name="products" />
         <module name="products-persistence" />
+        <module name="products" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

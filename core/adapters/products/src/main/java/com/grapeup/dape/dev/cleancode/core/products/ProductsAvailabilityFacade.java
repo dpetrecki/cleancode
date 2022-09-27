@@ -1,5 +1,7 @@
 package com.grapeup.dape.dev.cleancode.core.products;
 
+import com.grapeup.dape.dev.cleancode.core.products.model.Product;
+import com.grapeup.dape.dev.cleancode.core.products.model.Service;
 import com.grapeup.dape.dev.cleancode.egress.prodcuts.persistence.FindProducts;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

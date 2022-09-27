@@ -2,6 +2,8 @@ package com.grapeup.dape.dev.cleancode.core.products;
 
 import com.grapeup.dape.dev.cleancode.core.products.model.FilterableProduct;
 import com.grapeup.dape.dev.cleancode.core.products.model.FilterableService;
+import com.grapeup.dape.dev.cleancode.core.products.model.Product;
+import com.grapeup.dape.dev.cleancode.core.products.model.Service;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;

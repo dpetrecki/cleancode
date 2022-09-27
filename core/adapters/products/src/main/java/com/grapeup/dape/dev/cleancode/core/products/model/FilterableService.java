@@ -1,6 +1,5 @@
 package com.grapeup.dape.dev.cleancode.core.products.model;
 
-import com.grapeup.dape.dev.cleancode.core.products.Service;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
