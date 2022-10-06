@@ -10,3 +10,6 @@ This repository is just an example code for JDD 2022 presentation. Following bra
 - 6cyclicReference
 - 7isolateDDD
 - 8useInheritanceToRemoveOneMapping
+
+
+See zmiany.docx to check changes between branches (PL only)
